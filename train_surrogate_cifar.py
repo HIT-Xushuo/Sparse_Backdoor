@@ -54,20 +54,7 @@ def main(args):
 
     model = getattr(models, args.model)(num_classes=10).to(device)
 
-    # model = torchvision.models.MobileNetV2(num_classes=10)
-    # model.features[0][0] = torch.nn.Conv2d(3, 32, kernel_size=3, stride=1, padding=1, bias=False)
 
-    # model = torchvision.models.densenet121(num_classes=10)
-    # model.features.conv0 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
-    # model.features.pool0 = nn.Identity()
-
-    # model = torchvision.models.wide_resnet50_2(num_classes=10)
-    # model.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
-    # model.maxpool = nn.Identity()
-
-    # model = torchvision.models.shufflenet_v2_x1_0(num_classes=10)
-    # # 修改第一层（和 MobileNet 类似）
-    # model.conv1[0] = nn.Conv2d(3, 24, kernel_size=3, stride=1, padding=1, bias=False)
 
     model = model.to(device)
     criterion = torch.nn.CrossEntropyLoss().to(device)
