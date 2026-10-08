@@ -13,7 +13,7 @@ We have tested the code under the following environment settings:
 ## Launch backdoor attack
 **Step1:Train surrogate model**
 
-First, we must train a surrogate model to optimize the trigger and the generator.
+First, we must train a surrogate model to optimize the trigger and generator.
 
 ```
 python train_surrogate_cifar.py
